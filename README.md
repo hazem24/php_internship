@@ -1,4 +1,4 @@
-*# php_internship
+* php_internship
 web gen task 5 
 
 ## requirements:
