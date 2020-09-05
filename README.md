@@ -5,7 +5,7 @@ web gen task 5
   * **php 7**
   * **Mysql 5.7**
 ## setup steps.
- * Create a folder called php_internship at put the project inside it.
+ * Create a folder called ```php_internship``` at put the project inside it.
  * Make sure that the files structure as the following.
   * ![Files](https://i.ibb.co/6Hbc8mn/file-structure.png)
     * **php_internship->github_task**
