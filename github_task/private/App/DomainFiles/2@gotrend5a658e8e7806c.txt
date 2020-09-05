@@ -1,0 +1,433 @@
+<?php
+
+        namespace App\Model\WebServices\Twitter;
+
+        use Facebook\WebDriver;
+
+        use App\DomainMapper\ProxyMapper;
+
+        use App\DomainMapper\TwAccountsMapper;
+
+        use App\DomainMapper\EmailMapper;
+
+        
+
+        
+
+        /**
+
+        *This Class Responsable For Register Accounts In Twitter
+
+        */
+
+        Class TwRegister extends TwModel
+
+        {
+
+            CONST TW_REG_EMAIL_LINK = TW_REG_MAIL;
+
+            CONST TW_MOBILE_LINK = TW_MOBLIE_LINK;
+
+            protected $servicesPoints = 10;//10 Points For Every Account
+
+            private  $userPoints;
+
+            private $number;//Request Number User Want
+
+            private $proxyMapper;
+
+            public function __construct(int $userPoints , int $number , ProxyMapper $mapper){
+
+                   $this->proxyMapper = $mapper;
+
+                   $this->userPoints = $userPoints;
+
+                   $this->number = $number; 
+
+            }
+            /**
+            *@method hashTag I Create The Method Here For Simply But The Truth All Of This Must Have Model Alone !
+            */
+            public function hashTag(array $data){
+                   $userId    = $data['userId'];
+                   $hashtag   = $data['hashtag'];
+                   $accounts  = $data['accounts'];
+                   $looper = $this->calculation('register',$this->userPoints,$this->number,count($accounts));
+                   for ($i=0; $i < $looper; $i++) { 
+                          //Init Selenium Server 
+                                                                            
+                        $this->init(null);
+                          
+                        if(isset($accounts[$i])){
+                                $account_data = explode(':',$accounts[$i]);
+                                if(isset($account_data[0]) && isset($account_data[1]) && isset($account_data[2])){
+                                        $userName = $account_data[0];
+                                        $pwd = $account_data[1];
+                                        $email = $account_data[2];
+                                        $login_try = $this->login($userName,$pwd,$email);
+                                        if($login_try === true){
+                                                //Create Tweets Fast
+                                                $this->followAccounts($hashtag);
+                                        }                  
+                                }
+                        }                          
+                                                 
+                        $this->driver->quit(); //Close The Window
+                        $this->decrementUserPoints($userId,(int)$this->userPoints,(int)$this->servicesPoints);
+                        //Decrement User Points By 10
+                        $this->userPoints = $this->userPoints - $this->servicesPoints;
+                        }
+                return true;     
+            }
+
+            public function startProcess(array $data = []){
+
+                   /**
+
+                   *1- data Array Must Have The Following 
+
+                        *Must Have The Email List To Register To Twitter
+
+                        *User Id Which Send Request
+
+                   */ 
+
+                    $emailList = $data['emails'];
+
+                    $userId    = $data['userId'];
+
+                    $autoFollowers = $data['followers'];
+
+                    $arabicNames = $data['arabicNames'];
+                    $looper = $this->calculation('register',$this->userPoints,$this->number,count($emailList));
+
+                   for ($i=0; $i < $looper; $i++) { 
+
+                        //Init Selenium Server 
+
+                        $anyProxy = $this->getProxy($userId);
+
+                        $proxy = (is_null($anyProxy)) ? null : $anyProxy[0];
+
+                        $this->init($proxy);
+
+                        $email = $emailList[$i]['email_name'];
+
+                        $password = $this->createPassword();
+
+                        $firstStep = $this->regStepOne($email,$arabicNames);
+			if($firstStep === true){
+
+				/*
+
+				*Start Second Step
+
+				*/
+
+				$screenName = $this->regStepTwo($password);
+
+                                /**
+
+                                *1-Insert New Account With is_phone 0 
+
+                                */
+                                $this->followAccounts();
+                                $insertAccount = $this->insertNewAccount($userId,$email,$password,$screenName,0);
+
+                                //Specific Followers Must Be Here !
+                                $this->specificFollower($autoFollowers);
+
+                        }else if(is_array($firstStep) && array_key_exists('twitterPhone',$firstStep)){
+
+                                /**
+
+                                *1-Insert New Account With is_phone 1 
+
+                                */
+
+                                $insertAccount = $this->insertNewAccount($userId,$email,$password,(string)'',1);
+
+                                //Create Tweeta
+
+                        }
+
+                            
+
+                        if(isset($insertAccount) && $insertAccount === true){
+
+                                //delete The Email
+
+                                $this->deleteEmail($userId,$email);
+
+                        }
+
+                             	 
+
+						        $this->driver->quit(); //Close The Window
+
+
+
+                        if(!is_null($proxy)){
+
+                                //Increment Proxy By One
+
+                                $this->incrementProxy($userId,$proxy,$anyProxy[1]+1);
+
+                        }
+
+
+                        $this->decrementUserPoints($userId,(int)$this->userPoints,(int)$this->servicesPoints);
+                        //Decrement User Points By 10
+                        $this->userPoints = $this->userPoints - $this->servicesPoints;
+
+                   }
+
+                        return true;
+
+            }
+
+
+
+            private function getProxy(int $userId){
+
+                    /**
+
+                    *1- Get Proxy Which Counter < 3
+
+                    *2- Return First Proxy Which Get From DataBase
+
+                    */
+
+                    $proxyToUsed = $this->proxyMapper->lessThreeProxy($userId);
+
+                    return (is_null($proxyToUsed))? null : [$proxyToUsed[0]['proxy'],(int)$proxyToUsed[0]['counter']];
+
+            }
+
+
+
+            private function incrementProxy(int $userId , string $proxy , int $incrBy){
+
+                    $increment = $this->proxyMapper->incrementProxy($userId,$proxy,$incrBy);
+
+            }
+
+
+
+            private function createPassword(){
+
+                return uniqid() . rand(102094,10000000);
+
+            }
+
+
+
+	    private function regStepOne(string $emailName,bool $arabicNames = false){
+
+                /**
+
+                *1- Go To Twitter With Implicte Wait Some Time 
+
+                */
+                $fullName = ($arabicNames === true) ?  $this->arabicName() : $this->extractName($emailName);
+                $this->driver->get(self::TW_REG_EMAIL_LINK);
+
+                if(count($this->driver->findElements(WebDriver\webDriverBy::id('oauth_signup_client_fullname'))) != 0){
+
+
+
+                    $this->driver->findElement(WebDriver\WebDriverBy::name("oauth_signup_client[fullname]"))->sendKeys($fullName);
+
+                    $this->driver->wait(8);
+
+                    $this->driver->findElement(WebDriver\WebDriverBy::name("oauth_signup_client[phone_number]"))->sendKeys($emailName);
+
+                    $this->driver->wait(12);
+
+                    $div = $this->driver->findElement(WebDriver\WebDriverBy::className("phone"));
+
+
+
+                    $div->click();
+
+
+
+                    $submitButton = $this->driver->findElement(
+
+                        WebDriver\WebDriverBy::name('commit')
+
+                    );
+
+                    $submitButton->click();
+
+                    sleep(2);
+
+                    if(count($this->driver->findElements(WebDriver\webDriverBy::id('password'))) != 0){ //Password Field Found 
+
+                            return true; //Second Step Ready 
+
+                    }else if (count($this->driver->findElements(WebDriver\WebDriverBy::name('call_me'))) != 0){
+
+                            return ['twitterPhone'=>true];
+
+                    }
+
+                }
+
+                    return false;
+
+            }
+
+
+
+            private function regStepTwo(string $pwd){
+				sleep(3);
+				$this->driver->wait(6);
+
+				$this->driver->findElement(WebDriver\WebDriverBy::id("password"))->sendKeys($pwd);
+
+				$this->driver->wait(4);
+
+				$submitButton = $this->driver->findElement(
+
+					WebDriver\WebDriverBy::name('commit')
+
+				);
+
+				$submitButton->click();
+
+				//Another Check Must Be Here !
+
+				$this->driver->wait(2);
+
+				$userName = null;
+
+				if(count($this->driver->findElements(WebDriver\WebDriverBy::className("submit-link"))) != 0){
+
+                    $submitButton = $this->driver->findElement(WebDriver\WebDriverBy::className("submit-link"));
+
+                    $submitButton->click();
+
+                    $this->driver->wait(3);
+
+                    $nameElement = $this->driver->findElement(WebDriver\WebDriverBy::id("custom_name"));
+
+                    $userName = $nameElement->getAttribute("value");
+
+                    $this->driver->wait(2);
+
+                    $submitButton = $this->driver->findElement(WebDriver\WebDriverBy::name('commit'))->click();
+
+                    $this->driver->wait(2);
+				}		
+
+				return $userName;	
+
+            }
+
+
+            private function followAccounts(string $hashtag = ''){
+					$this->driver->get("https://twitter.com/");
+                    if(count($this->driver->findElements(WebDriver\WebDriverBy::id("global-new-tweet-button"))) != 0 ){
+                                $this->driver->findElement(WebDriver\WebDriverBy::id("global-new-tweet-button"))->click();
+								$this->driver->findElement(WebDriver\WebDriverBy::id('tweet-box-global'))->sendKeys($this->tweets($hashtag));
+								$this->driver->findElements(WebDriver\WebDriverBy::className('Icon--geo'))[1]->click();//tweeting-text
+
+                    }
+					
+					if(count($this->driver->findElements(WebDriver\WebDriverBy::className("geo-turn-on"))) != 0){//geo-turn-on EdgeButton
+							$this->driver->findElements(WebDriver\WebDriverBy::className("geo-turn-on"))[1]->click();
+							sleep(2);
+							$this->driver->findElements(WebDriver\WebDriverBy::className('Icon--geo'))[1]->click();
+					}
+					if(count($this->driver->findElements(WebDriver\WebDriverBy::className('tweeting-text'))) !=0){
+							$this->driver->findElements(WebDriver\WebDriverBy::className('tweeting-text'))[1]->click();
+					}
+					sleep(1);
+                    return true;
+            }
+
+            
+
+            private function insertNewAccount(int $userId,string $email,string $password, string $username = '', int $phone = 0){
+
+                    $accountMapper  = new TwAccountsMapper;
+
+                    $insertAccounts = $accountMapper->insertAccount($userId,(string)$email,$password,$username, $phone);
+
+                    if($insertAccounts !== false){
+
+                            return true; 
+
+                    }
+
+                            return false;
+
+            }
+
+
+
+            private function deleteEmail(int $userId , string $email){
+
+                    $emailMapper = new EmailMapper;
+
+                    $deleteEmail = $emailMapper->deleteEmail($userId,(string)$email);
+
+            }
+
+            private function specificFollower(array $followers = []):bool{
+                    /*
+                    *1- Go To User Link. 
+                    *2- Follow User And Sleep 2 Sec.
+                    *3- Return True So The Process Ended.    
+                    */
+                        if(!empty($followers)){
+                                $counter = count($followers);
+                                for($i=0;$i<$counter;$i++){
+                                        if(isset($followers[$i])){
+                                               $following_data = explode(':',$followers[$i]);  //username:twitterid
+                                               $username = (string) $following_data[0];
+                                               $tw_id = (int) $following_data[1];
+                                               return $this->startFollow($username,$tw_id);       
+                                        }
+                                }
+                        }
+                        return true;
+            }
+            //data-testid="732292418-follow"
+            private function startFollow(string $userName , int $tw_id):bool{
+                    $this->driver->get('https://mobile.twitter.com/'.$userName.'/');
+                    sleep(2);
+                    
+                    if(count($this->driver->findElements(WebDriver\WebDriverBy::cssSelector('[data-testid="'.$tw_id.'-follow"]')))!=0){
+                                $this->driver->findElement(WebDriver\WebDriverBy::cssSelector('[data-testid="'.$tw_id.'-follow"]'))->click();
+                                sleep(2);
+                                return true;
+                    }
+                    return false;    
+            }
+
+            /**
+            *@method arabicName This Method Have Alot Of Arabic Name Which Can Be Used In Register Process
+            */
+            private function arabicName():string{
+                    $arabic_full_name = explode(PHP_EOL,file_get_contents('arabicnames.txt'));
+                    $arabic_full_name = array_filter($arabic_full_name);
+                    if(!empty($arabic_full_name)){
+                                return (string)$arabic_full_name[rand(0,count($arabic_full_name)-1)];
+                    }
+                        return 'خطا لا يوجد اسماء برجاء اضافه اسماء للبرنامج ';
+            }
+            /**
+            *This Method Must Delete And Replace It With Control In View Page With Text Area Put Tweets On It Edited 
+            *I Change My Mind So I Will Put Tweets In Tweets.txt File So Will Be More Easy For Me @written 16/09/2017 @06:20Pm
+            */
+            private function tweets(string $hashtag = ''):string{
+                    $tweets  = explode(PHP_EOL,file_get_contents('tweets.txt'));;
+                    $counter = count($tweets)-1;
+                    return $tweets[rand(0,$counter)] . "             
+$hashtag";    
+            }
+
+        } 
+

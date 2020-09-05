@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px/20px "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+  color: #676e74;
+  background: #E9EEF1;
+  overflow:hidden;
+}
+.containere{
+  margin-top: 100px;
+}
+.logo_img {
+    width: 300px;
+    margin-bottom: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;  
+}
+.switchs{
+  width: 400px;
+  margin-top: 40px;
+  margin: auto;
+}
+.switchs .input-group{
+  margin-bottom: 15px;
+}
+.content {
+    width: 100%;
+    border-bottom: 1px solid #662d91;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.tabButtons{
+    position: relative;
+    top: 12px;
+}
+.ant-btn-group {
+    position: relative;
+    display: inline-block;
+}
+.input-group-addon:not(:last-child) {
+    border-right: 0;
+    font-size: 11px;
+}
+.btn-secondary{
+  background-color: #FFF;
+  color: #555;
+}
+.btn-secondary:hover{
+  background-color: #FFF;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+.btn-active{
+  background-color: #007bff;
+  color: #FFF;
+}
+.btn-active:hover{
+  background-color: #49a9ee;
+  color: #FFF;
+}
+#Advanced-content{
+  width: 100%;
+
+}

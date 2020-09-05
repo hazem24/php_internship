@@ -1,0 +1,325 @@
+[03-Jan-2018 14:50:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/gotrend/public_html/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/gotrend/public_html/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'https://gotrend...')
+#1 /home/gotrend/public_html/private/App/Controller/Tweet.php(76): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/gotrend/public_html/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction()
+#3 /home/gotrend/public_html/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction')
+#4 /home/gotrend/public_html/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/gotrend/public_html/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /home/gotrend/public_html/index.php(16): App\Router\Router->dispatch()
+#7 {main}
+  thrown in /home/gotrend/public_html/private/App/DomainHelper/Helper.php on line 15
+[16-Jan-2018 14:17:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/gotrend/public_html/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/gotrend/public_html/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'https://gotrend...')
+#1 /home/gotrend/public_html/private/App/Controller/Tweet.php(76): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/gotrend/public_html/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction()
+#3 /home/gotrend/public_html/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction')
+#4 /home/gotrend/public_html/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/gotrend/public_html/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /home/gotrend/public_html/index.php(16): App\Router\Router->dispatch()
+#7 {main}
+  thrown in /home/gotrend/public_html/private/App/DomainHelper/Helper.php on line 15
+[18-Sep-2018 17:00:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/sr1000/public_html/gotrend.today/private/App/DomainHelper/Helper.php:25
+Stack trace:
+#0 /home/sr1000/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(162): App\DomainHelper\Helper::redirectInside('id', 'http://sr-1000....')
+#1 /home/sr1000/public_html/gotrend.today/private/App/Controller/Index.php(19): Framework\Shared\Controller->rIn('id', 'overview')
+#2 /home/sr1000/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Index->defaultAction(Array)
+#3 /home/sr1000/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('defaultAction', Array)
+#4 /home/sr1000/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/sr1000/public_html/gotrend.today/private/App/Router/Router.php(85): App\Router\Router->__pass(Array)
+#6 /home/sr1000/public_html/gotrend.today/index.php( in /home/sr1000/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 25
+[21-Sep-2018 15:55:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gotrend003.session' doesn't exist in /home/sr01/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php:41
+Stack trace:
+#0 /home/sr01/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php(41): PDOStatement->execute()
+#1 /home/sr01/public_html/gotrend.today/private/App/Framework/Lib/Session/AppSession.php(52): App\DomainMapper\SessionMapper->find(Array)
+#2 [internal function]: Framework\Lib\Session\AppSession->read('hfh0nvp44gm1b5n...')
+#3 /home/sr01/public_html/gotrend.today/private/App/Framework/Lib/Session/AppSession.php(29): session_start()
+#4 /home/sr01/public_html/gotrend.today/private/App/Setting.php(93): Framework\Lib\Session\AppSession->__construct()
+#5 /home/sr01/public_html/gotrend.today/index.php(11): require('/home/sr01/publ...')
+#6 {main}
+  thrown in /home/sr01/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php on line 41
+[21-Sep-2018 15:56:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gotrend003.session' doesn't exist in /home/sr01/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php:41
+Stack trace:
+#0 /home/sr01/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php(41): PDOStatement->execute()
+#1 /home/sr01/public_html/gotrend.today/private/App/Framework/Lib/Session/AppSession.php(52): App\DomainMapper\SessionMapper->find(Array)
+#2 [internal function]: Framework\Lib\Session\AppSession->read('c6ivlor6hkt6ecs...')
+#3 /home/sr01/public_html/gotrend.today/private/App/Framework/Lib/Session/AppSession.php(29): session_start()
+#4 /home/sr01/public_html/gotrend.today/private/App/Setting.php(93): Framework\Lib\Session\AppSession->__construct()
+#5 /home/sr01/public_html/gotrend.today/index.php(11): require('/home/sr01/publ...')
+#6 {main}
+  thrown in /home/sr01/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php on line 41
+[16-Oct-2019 05:22:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'Wafa64279753.session' doesn't exist in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php:41
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php(41): PDOStatement->execute()
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Lib/Session/AppSession.php(52): App\DomainMapper\SessionMapper->find(Array)
+#2 [internal function]: Framework\Lib\Session\AppSession->read('tv7qsr0p9o8nibd...')
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Lib/Session/AppSession.php(29): session_start()
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Setting.php(93): Framework\Lib\Session\AppSession->__construct()
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/index.php(11): require('/home/z02c5mqkv...')
+#6 {main}
+  thrown in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SessionMapper.php on line 41
+[29-Oct-2019 10:49:34 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[29-Oct-2019 10:49:39 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[03-Nov-2019 23:29:26 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[03-Nov-2019 23:29:31 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[03-Dec-2019 03:05:12 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 03:05:12 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 03:05:12 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 22:13:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 22:13:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 22:13:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 22:13:12 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 22:13:12 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[03-Dec-2019 22:13:12 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[11-Dec-2019 20:59:08 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[11-Dec-2019 20:59:08 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[11-Dec-2019 20:59:08 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[16-Dec-2019 11:00:22 UTC] PHP Warning:  require(/home/z02c5mqkvnd9/public_html/gotrend.today/private/vendor/autoload.php): failed to open stream: No such file or directory in /home/z02c5mqkvnd9/public_html/gotrend.today0011/private/App/Setting.php on line 52
+[16-Dec-2019 11:00:22 UTC] PHP Fatal error:  require(): Failed opening required '/home/z02c5mqkvnd9/public_html/gotrend.today/private/vendor/autoload.php' (include_path='.:/opt/alt/php70/usr/share/pear') in /home/z02c5mqkvnd9/public_html/gotrend.today0011/private/App/Setting.php on line 52
+[31-Dec-2019 14:43:55 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Dec-2019 14:43:55 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Dec-2019 14:43:55 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[01-Jan-2020 21:25:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[13-Jan-2020 04:06:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Jan-2020 04:06:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Jan-2020 04:06:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[18-Jan-2020 03:16:23 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[18-Jan-2020 03:16:23 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[18-Jan-2020 03:16:23 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Feb-2020 23:57:51 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Feb-2020 23:57:51 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Feb-2020 23:57:51 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[17-Feb-2020 16:01:54 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[17-Feb-2020 16:01:54 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[17-Feb-2020 16:01:54 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[19-Feb-2020 09:14:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[19-Feb-2020 09:14:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[19-Feb-2020 09:14:06 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:56:59 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:02 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:04 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:07 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:11 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:14 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:17 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:20 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:23 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Mar-2020 07:57:26 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:14:18 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:14:21 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:14:24 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:14:27 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:14:30 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:14:34 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:30:01 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[13-Mar-2020 08:30:05 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Apr-2020 03:00:18 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Apr-2020 03:00:18 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[12-Apr-2020 03:00:18 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[17-May-2020 07:04:01 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[17-May-2020 07:04:01 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[17-May-2020 07:04:01 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[19-May-2020 17:09:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[19-May-2020 17:14:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[19-May-2020 17:14:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[27-Jul-2020 19:28:22 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[27-Jul-2020 19:28:27 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[29-Jul-2020 02:41:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[29-Jul-2020 02:41:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[29-Jul-2020 02:41:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[29-Jul-2020 02:41:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[29-Jul-2020 02:41:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[29-Jul-2020 02:41:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[16-Aug-2020 15:13:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[16-Aug-2020 15:13:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[16-Aug-2020 15:13:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[16-Aug-2020 15:13:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[16-Aug-2020 15:13:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[16-Aug-2020 15:13:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[28-Aug-2020 19:43:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 19:43:08 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 19:43:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 19:43:13 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 19:43:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 19:43:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 19:43:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 19:43:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 20:33:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 20:33:24 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[28-Aug-2020 20:33:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getSession() on boolean in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php:15
+Stack trace:
+#0 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(158): App\DomainHelper\Helper::redirectOutSide('id', 'http://facebokl...')
+#1 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Controller/Tweet.php(81): Framework\Shared\Controller->rOut('id', 'index')
+#2 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(90): App\Controller\Tweet->logStatusAction(Array)
+#3 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Framework/Shared/Controller.php(63): Framework\Shared\Controller->methodToCall('logStatusAction', Array)
+#4 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(99): Framework\Shared\Controller->findIt(Array)
+#5 /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/Router/Router.php(80): App\Router\Router->__pass(Array)
+#6 /hom in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainHelper/Helper.php on line 15
+[31-Aug-2020 03:11:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Aug-2020 03:11:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Aug-2020 03:11:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Aug-2020 03:11:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Aug-2020 03:11:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Aug-2020 03:11:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15
+[31-Aug-2020 03:11:00 UTC] PHP Fatal error:  Class 'Framework\Lib\Database\DataMapper\AbstractDataMapper' not found in /home/z02c5mqkvnd9/public_html/gotrend.today/private/App/DomainMapper/SubscriberMapper.php on line 15

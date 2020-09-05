@@ -1,0 +1,1826 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	background:#f9f9f9 ; 
+	color: #222;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	margin:0px;
+	padding:0px;
+}
+
+a {
+	color: #23dbdb;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+ol, ul {
+	list-style: none;
+	padding:0px;
+	margin:0px;
+}
+#wrap {
+	margin: 0 auto;
+}
+
+.inner {
+	margin: 0 auto;
+	max-width: 940px;
+	padding: 0 40px;
+}
+
+.relative {
+	position: relative;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+/* HEADER */
+#wrap > header {
+	background-color: #f9f9f9;
+	padding-bottom: 10px;
+	height: 50px;
+	border-bottom: 1px solid #EEE;
+	padding-top: 10px;
+}
+.logo {
+	display: inline-block;
+	font-size: 0;
+	padding-top:15px;
+}
+.content2 input , .input-group-addon{
+	font-size: 12px;
+}
+#navigation {
+float:left;
+}
+
+#menu-toggle {
+	display: none;
+	float: right;
+}
+
+/* HEADER > MENU */
+#main-menu {
+	float: right;
+	font-size: 0;
+	margin: 10px 0;
+}
+
+#main-menu > li {
+	display: inline-block;
+	margin-left: 30px;
+	padding: 2px 0;
+}
+
+#main-menu > li.parent {
+	background-image: url(../images/plus-gray.png);
+	background-size: 7px 7px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#main-menu > li.parent > a {
+	padding-left: 14px;
+}
+
+#main-menu > li > a {
+	color: #222;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 30px 0;
+	text-decoration:none;
+}
+
+#main-menu > li:hover > a,
+#main-menu > li.current-menu-item > a {
+	color: #108ee9;
+}
+
+/* HEADER > MENU > DROPDOWN */
+#main-menu li {
+	position: relative;
+}
+
+ul.sub-menu { /* level 2 */
+	display: none;
+	left: 0px;
+	top: 38px;
+	padding-top: 10px;
+	position: absolute;
+	width: 150px;
+	z-index: 9999;
+}
+
+ul.sub-menu ul.sub-menu { /* level 3+ */
+	margin-top: -1px;
+	padding-top: 0;
+	left: 149px;
+	top: 0px;
+}
+
+ul.sub-menu > li > a {
+	background-color: #333;
+	border: 1px solid #444;
+	border-top: none;
+	color: #bbb;
+	display: block;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 10px 12px;
+}
+
+ul.sub-menu > li > a:hover {
+	background-color: #2a2a2a; 
+	color: #fff;
+}
+
+ul.sub-menu > li:first-child {
+	border-top: 3px solid #108ee9;
+}
+
+ul.sub-menu ul.sub-menu > li:first-child {
+	border-top: 1px solid #444;
+}
+
+ul.sub-menu > li:last-child > a {
+	border-radius: 0 0 2px 2px;
+}
+
+ul.sub-menu > li > a.parent {
+	background-image: url(../images/arrow.png);
+	background-size: 5px 9px;
+	background-repeat: no-repeat;
+	background-position: 95% center;
+}
+
+#main-menu li:hover > ul.sub-menu {
+	display: block; /* show the submenu */
+}
+
+@media all and (max-width: 700px) {
+
+	#navigation {
+		position: static;
+		margin-top: 20px;
+	}
+
+	#menu-toggle {
+		display: block;
+	}
+
+	#main-menu {
+		display: none;
+		float: none;
+	}
+
+	#main-menu li {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	#main-menu > li {
+		margin-top: -1px;
+	}
+
+	#main-menu > li:first-child {
+		margin-top: 0;
+	}
+
+	#main-menu > li > a {
+		background-color: #333;
+		border: 1px solid #444;
+		color: #bbb;
+		display: block;
+		font-size: 14px;
+		padding: 12px !important;
+		padding: 0;
+	}
+
+	#main-menu li > a:hover {
+		background-color: #444; 
+	}
+
+	#main-menu > li.parent {
+		background: none !important;
+		padding: 0;
+	}
+
+	#main-menu > li:hover > a,
+	#main-menu > li.current-menu-item > a {
+		border: 1px solid #444 !important;
+		color: #fff !important;
+	}
+
+	ul.sub-menu {
+		display: block;
+		margin-top: -1px;
+		margin-left: 20px;
+		position: static;
+		padding: 0;
+		width: inherit;
+	}
+
+	ul.sub-menu > li:first-child {
+		border-top: 1px solid #444 !important;
+	}
+
+	ul.sub-menu > li > a.parent {
+		background: #333 !important;
+	}
+}
+
+.Session__scrollingTabCont___r0IPb .ant-tabs-bar {
+    margin-bottom: 0;
+
+}
+.ant-tabs-bar {
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 16px;
+    outline: none;
+    width: 95%;
+    margin: auto;
+}
+
+.ant-tabs-nav-container {
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: -1px;
+    zoom: 1;
+}
+
+.ant-tabs-nav-wrap {
+    overflow: hidden;
+    margin-bottom: -1px;
+}
+
+.ant-tabs-nav-scroll {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ant-tabs-nav {
+    box-sizing: border-box;
+    padding-left: 0;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    margin: 0;
+    list-style: none;
+    float: left;
+}
+
+
+.ant-tabs-top .ant-tabs-ink-bar-animated, .ant-tabs-bottom .ant-tabs-ink-bar-animated {
+    -webkit-transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+
+.ant-tabs-nav .ant-tabs-tab-active {
+    color: #108ee9;
+}
+.ant-tabs-nav .ant-tabs-tab {
+    display: inline-block;
+    height: 100%;
+    margin-right: 24px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 8px 20px;
+    -webkit-transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    text-decoration: none;
+}
+.active{
+	z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    box-sizing: border-box;
+    height: 2px;
+    background-color: #108ee9;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content-animated {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    will-change: margin-left;
+    -webkit-transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content {
+    width: 100%;
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    -webkit-transition: opacity .45s;
+    transition: opacity .45s;
+    opacity: 1;
+}
+
+.Session__scrollingTab___-4AID {
+    overflow-y: scroll;
+    flex-grow: 1;
+    padding-top: 16px;
+}
+.Session__capsFormRow___1uyhD {
+    flex-wrap: nowrap;
+}
+
+.ant-row-flex-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.ant-row-flex-start {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+.ant-row-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.Session__capsFormCol___tcPdS {
+    min-width: 476px;
+}
+.ant-col-order-1 {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+}
+.Session__desired-capabilities-form-container___t4lxf {
+    margin-bottom: 1em;
+}
+.ant-form-inline .ant-form-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+.ant-input {
+    position: relative;
+    display: inline-block;
+    padding: 4px 7px;
+    width: 100%;
+    height: 28px;
+    cursor: text;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+.ant-input-lg {
+    padding: 6px 7px;
+    height: 32px;
+}
+.ant-input {
+    position: relative;
+    display: inline-block;
+    padding: 4px 7px;
+    width: 100%;
+    height: 28px;
+    cursor: text;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+.ant-form-inline .ant-form-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+.ant-form-inline .ant-form-item > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.ant-btn.disabled, .ant-btn[disabled], .ant-btn.disabled:hover, .ant-btn[disabled]:hover, .ant-btn.disabled:focus, .ant-btn[disabled]:focus, .ant-btn.disabled:active, .ant-btn[disabled]:active, .ant-btn.disabled.active, .ant-btn[disabled].active {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f7f7f7;
+    border-color: #d9d9d9;
+}
+.ant-btn.disabled, .ant-btn[disabled] {
+    cursor: not-allowed;
+}
+.Session__capsFormLastRow___1crC0 {
+    width: 100%;
+    text-align: right;
+}
+.ant-form-inline .ant-form-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+.ant-form-inline .ant-form-item > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+.Session__capsFormattedCol___3iZ-E {
+    flex-grow: 1;
+}
+.ant-col-order-2 {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+}
+.Session__formatted-caps___O28ZR {
+    width: 100%;
+    margin-bottom: 15px;
+    min-height: 250px;
+}
+.ant-card-bordered {
+    border: 1px solid #e9e9e9;
+}
+.ant-card {
+    background: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+.ant-card-head {
+    height: 48px;
+    line-height: 48px;
+    background: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 0 24px;
+}
+.ant-card-head-title {
+    font-size: 14px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+}
+.ant-card-body {
+    padding: 24px;
+}
+.Session__capsEditorControls___10a4c {
+    position: absolute;
+    right: 0;
+    margin: 4px 24px;
+}
+.Session__formatted-caps___O28ZR pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+code, kbd, pre, samp {
+    font-family: Consolas, Menlo, Courier, monospace;
+}
+
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane-inactive {
+    opacity: 0;
+    height: 0;
+    padding: 0!important;
+}
+
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane-inactive {
+    opacity: 0;
+    height: 0;
+    padding: 0!important;
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    -webkit-transition: opacity .45s;
+    transition: opacity .45s;
+    opacity: 1;
+}
+.Session__scrollingTab___-4AID {
+   overflow: hidden;
+    flex-grow: 1;
+    padding-top: 16px;
+}
+.Session__capsEditorControls___10a4c {
+    position: absolute;
+    right: 0;
+    margin: 4px 24px;
+}
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+.Session__capsEditorButton___124Am {
+    margin: 0 4px 0 0;
+}
+.ant-btn, .ant-btn:active, .ant-btn:focus {
+    outline: 0;
+}
+.ant-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: 0 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+.ant-form-inline .ant-form-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+
+
+.ant-form-inline .ant-form-item > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+form .ant-select:only-child, form .ant-cascader-picker:only-child {
+    display: block;
+}
+form .ant-select, form .ant-cascader-picker {
+    width: 100%;
+}
+.ant-select {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 12px;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+.ant-select-lg .ant-select-selection--single {
+    height: 32px;
+}
+.ant-select-selection--single {
+    height: 28px;
+    position: relative;
+    cursor: pointer;
+}
+.ant-select-selection {
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+    display: block;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.ant-select-lg .ant-select-selection__rendered {
+    line-height: 30px;
+}
+.ant-select-selection__rendered {
+    display: block;
+    margin-left: 7px;
+    margin-right: 7px;
+    position: relative;
+    line-height: 26px;
+}
+
+.ant-select-selection-selected-value {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    padding-right: 14px;
+}
+:root .ant-select-arrow {
+    font-size: 12px;
+}
+:root .ant-select-arrow {
+    -webkit-filter: none;
+    filter: none;
+}
+.ant-select-arrow {
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: center;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    line-height: 1;
+    margin-top: -6px;
+    display: inline-block;
+    font-size: 12px;
+    font-size: 9px \9;
+    -webkit-transform: scale(0.75) rotate(0deg);
+    -ms-transform: scale(0.75) rotate(0deg);
+    transform: scale(0.75) rotate(0deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
+    zoom: 1;
+}
+.ant-select-selection__rendered:after {
+    content: '.';
+    visibility: hidden;
+    pointer-events: none;
+    display: inline-block;
+    width: 0;
+}
+
+:root .ant-select-arrow {
+    font-size: 12px;
+}
+:root .ant-select-arrow {
+    -webkit-filter: none;
+    filter: none;
+}
+.ant-select-arrow {
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: center;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    line-height: 1;
+    margin-top: -6px;
+    display: inline-block;
+    font-size: 12px;
+    font-size: 9px \9;
+    -webkit-transform: scale(0.75) rotate(0deg);
+    -ms-transform: scale(0.75) rotate(0deg);
+    transform: scale(0.75) rotate(0deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=1, M12=0, M21=0, M22=1)";
+    zoom: 1;
+}
+
+.ant-select-arrow:before {
+    content: '\E61D';
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.dropdown-toggle{
+	background-color: #FFF;
+	color: #999;
+	height: 30px;
+	padding-top: 6px;
+	border: 1px solid #e9e9e9;	
+	font-size: 11px
+}
+.ant-col-order-2{
+	float: right;
+}
+
+.ant-form-inline .ant-form-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+
+.ant-form-inline .ant-form-item > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+.ant-form-item-control:before, .ant-form-item-control:after {
+    content: " ";
+    display: table;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.ant-btn.disabled, .ant-btn[disabled], .ant-btn.disabled:hover, .ant-btn[disabled]:hover, .ant-btn.disabled:focus, .ant-btn[disabled]:focus, .ant-btn.disabled:active, .ant-btn[disabled]:active, .ant-btn.disabled.active, .ant-btn[disabled].active {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f7f7f7;
+    border-color: #d9d9d9;
+}
+.ant-btn.disabled, .ant-btn[disabled] {
+    cursor: not-allowed;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+.ant-btn-lg {
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 32px;
+}
+.ant-btn, .ant-btn:active, .ant-btn:focus {
+    outline: 0;
+}
+.ant-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: 0 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    //overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    //overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+user agent stylesheet
+input[type="button" i]:disabled, input[type="submit" i]:disabled, input[type="reset" i]:disabled, input[type="file" i]:disabled::-webkit-file-upload-button, button:disabled, select:disabled, keygen:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+    color: graytext;
+}
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    padding: 1px 6px;
+}
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+user agent stylesheet
+input, textarea, keygen, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}
+user agent stylesheet
+input, textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+user agent stylesheet
+button {
+    -webkit-appearance: button;
+}
+Inherited from div.ant-form-item-control
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+Inherited from div.ant-row.ant-form-item
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+Inherited from div.ant-tabs.ant-tabs-top.Session__scrollingTabCont___r0IPb.ant-tabs-line
+.ant-tabs {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    color: rgba(0, 0, 0, 0.65);
+}
+Inherited from body
+body {
+    color: #222!important;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+}
+body {
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+}
+Inherited from html
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+.ant-btn:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    background: #fff;
+    opacity: 0.35;
+    content: '';
+    border-radius: inherit;
+    z-index: 1;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+    pointer-events: none;
+    display: none;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+Pseudo ::selection element
+::selection {
+    background: #108ee9;
+    color: #fff;
+}
+::selection {
+    background: #108ee9;
+    color: #fff;}
+
+.ant-btn .anticon {
+    -webkit-transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: margin-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-btn.disabled > *, .ant-btn[disabled] > * {
+    pointer-events: none;
+}
+.ant-btn > .anticon {
+    line-height: 1;
+}
+.anticon {
+    display: inline-block;
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: center;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.anticon {
+    display: inline-block;
+    font-style: normal;
+    vertical-align: baseline;
+    text-align: center;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+user agent stylesheet
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+Inherited from button.ant-btn.ant-btn-lg.ant-btn-icon-only
+.ant-btn.disabled, .ant-btn[disabled], .ant-btn.disabled:hover, .ant-btn[disabled]:hover, .ant-btn.disabled:focus, .ant-btn[disabled]:focus, .ant-btn.disabled:active, .ant-btn[disabled]:active, .ant-btn.disabled.active, .ant-btn[disabled].active {
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f7f7f7;
+    border-color: #d9d9d9;
+}
+.ant-btn.disabled, .ant-btn[disabled] {
+    cursor: not-allowed;
+}
+.ant-btn-lg {
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 32px;
+}
+.ant-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: 0 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+button, select {
+    text-transform: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+user agent stylesheet
+input[type="button" i]:disabled, input[type="submit" i]:disabled, input[type="reset" i]:disabled, input[type="file" i]:disabled::-webkit-file-upload-button, button:disabled, select:disabled, keygen:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+    color: graytext;
+}
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+user agent stylesheet
+input, textarea, keygen, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}
+Inherited from div.ant-form-item-control
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+Inherited from div.ant-row.ant-form-item
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+Inherited from div.ant-tabs.ant-tabs-top.Session__scrollingTabCont___r0IPb.ant-tabs-line
+.ant-tabs {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    color: rgba(0, 0, 0, 0.65);
+}
+Inherited from body
+body {
+    color: #222!important;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+}
+body {
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+}
+Inherited from html
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+.anticon-delete:before {
+    content: "\E69F";
+}
+.anticon:before {
+    display: block;
+    font-family: "anticon" !important;
+}
+.anticon-delete:before {
+    content: "\E69F";
+}
+.anticon:before {
+    display: block;
+    font-family: "anticon" !important;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+Pseudo ::selection element
+::selection {
+    background: #108ee9;
+    color: #fff;
+}
+::selection {
+    background: #108ee9;
+    color: #fff;
+}
+
+
+.anticon-delete:before {
+    content: "\E69F";
+}
+.anticon:before {
+    display: block;
+    font-family: "anticon" !important;
+}
+
+.anticon-delete:before {
+    content: "\E69F";
+}
+.anticon:before {
+    display: block;
+    font-family: "anticon" !important;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+.Session__capsFormLastRow___1crC0 {
+    width: 100%;
+    text-align: right;
+}
+.ant-form-inline .ant-form-item {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+.ant-form-inline .ant-form-item > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+.ant-btn-lg {
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    height: 32px;
+}
+.ant-btn, .ant-btn:active, .ant-btn:focus {
+    outline: 0;
+}
+.ant-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: 0 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    //overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    //overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    padding: 1px 6px;
+}
+user agent stylesheet
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+user agent stylesheet
+input, textarea, keygen, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+}
+user agent stylesheet
+input, textarea, keygen, select, button, meter, progress {
+    -webkit-writing-mode: horizontal-tb;
+}
+user agent stylesheet
+button {
+    -webkit-appearance: button;
+}
+Inherited from div.ant-form-item-control
+.ant-form-item-control {
+    line-height: 32px;
+    position: relative;
+    zoom: 1;
+}
+Inherited from div.ant-row.ant-form-item
+.ant-form-item {
+    font-size: 12px;
+    margin-bottom: 24px;
+    color: rgba(0, 0, 0, 0.65);
+    vertical-align: top;
+}
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+}
+Inherited from div.Session__capsFormLastRow___1crC0
+.Session__capsFormLastRow___1crC0 {
+    width: 100%;
+    text-align: right;
+}
+Inherited from div.ant-tabs.ant-tabs-top.Session__scrollingTabCont___r0IPb.ant-tabs-line
+.ant-tabs {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    zoom: 1;
+    color: rgba(0, 0, 0, 0.65);
+}
+Inherited from body
+body {
+    color: #222!important;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+}
+body {
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+}
+Inherited from html
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+.ant-btn:before {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: -1px;
+    background: #fff;
+    opacity: 0.35;
+    content: '';
+    border-radius: inherit;
+    z-index: 1;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+    pointer-events: none;
+    display: none;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+Pseudo ::selection element
+::selection {
+    background: #108ee9;
+    color: #fff;
+}
+::selection {
+    background: #108ee9;
+    color: #fff;
+}
+
+body{
+	overflow: hidden;
+}
+.ant-card-head-title {
+    font-size: 14px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 500;
+}
+.ant-card-body {
+    padding: 24px;
+}
+.Session__capsEditorControls___10a4c {
+    position: absolute;
+    right: 0;
+    margin: 4px 24px;
+}
+.Session__formatted-caps___O28ZR pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+code, kbd, pre, samp {
+    font-family: Consolas, Menlo, Courier, monospace;
+}
+
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane-inactive {
+    opacity: 0;
+    height: 0;
+    padding: 0!important;
+}
+
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane-inactive {
+    opacity: 0;
+    height: 0;
+    padding: 0!important;
+}
+.ant-tabs:not(.ant-tabs-vertical) > .ant-tabs-content > .ant-tabs-tabpane {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 100%;
+    -webkit-transition: opacity .45s;
+    transition: opacity .45s;
+    opacity: 1;
+}
+.Session__scrollingTab___-4AID {
+   overflow: hidden;
+    flex-grow: 1;
+    padding-top: 16px;
+}
+.Session__capsEditorControls___10a4c {
+    position: absolute;
+    right: 0;
+    margin: 4px 24px;
+}
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.ant-btn:not(.ant-btn-circle):not(.ant-btn-circle-outline).ant-btn-icon-only {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+.Session__capsEditorButton___124Am {
+    margin: 0 4px 0 0;
+}
+.ant-btn, .ant-btn:active, .ant-btn:focus {
+    outline: 0;
+}
+.ant-btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: 0 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    position: relative;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+.activia{
+	border-bottom: 4px solid #108ee9;
+	color: #108ee9;
+}
+.CMD{
+    height: 55px;
+    width: 100%;
+    background-color: #EEE;
+   text-align: right;
+   padding-top: 5px;
+   position: fixed;
+   top: 93%;
+   border:1px solid #e9e9e9;
+   margin-left: -34px;
+   padding-right: 20px;
+   padding-bottom: 10px;
+}
+.main-CMD{
+   
+    width: 100%;
+    height: 93vh;
+
+}

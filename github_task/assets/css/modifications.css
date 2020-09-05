@@ -1,0 +1,41 @@
+
+  
+  .alert.alert-info {
+background-color: #3b444a;
+    color: #ffffff;
+}
+  
+
+body{
+background: #fff   ;
+position: relative;
+  margin: 0;
+  padding-bottom: 8rem;
+  min-height: 100%;
+}
+p , h1 , h4 , span , a ,  label {
+  color: #3b444a;
+}
+.footer{
+  color: #3b444a;
+  border: 1px solid #DDD;
+  width: 100%;
+   position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+	}
+
+.form-control, .form-group .form-control {
+
+    color: #3b444a;
+
+}
+
+.form-group label.control-label{
+    color: #3b444a;
+
+}
+.checkbox label, .radio label, label{
+    color: #3b444a;
+}

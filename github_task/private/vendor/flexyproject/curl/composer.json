@@ -1,0 +1,25 @@
+{
+	"name": "flexyproject/curl",
+	"type": "library",
+	"description": "A PHP7 object-oriented wrapper of the cURL extension",
+	"homepage": "https://github.com/FlexyProject/Curl",
+	"keywords": [
+		"curl"
+	],
+	"license": "LGPL-3.0+",
+	"authors": [
+		{
+			"name": "David Sanchez",
+			"email": "david38sanchez@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7",
+		"ext-curl": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"FlexyProject\\Curl\\": "./"
+		}
+	}
+}

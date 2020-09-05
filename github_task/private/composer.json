@@ -1,0 +1,21 @@
+{
+
+    "autoload":{
+        "psr-4": {
+            "Configuration\\":"App/Configuration/",
+            "Framework\\":"App/Framework/",
+            "App\\":"App/",
+            "PhpMailer\\":"vendor/phpmailer/phpmailer/"
+        }
+    },
+    "require": {
+        "jonnyw/php-phantomjs": "4.*",
+        "facebook/webdriver": "^1.4",
+        "phpmailer/phpmailer": "^5.2",
+        "php-curl-class/php-curl-class": "^7.4",
+        "abraham/twitteroauth": "^0.7.4",
+        "fabpot/goutte": "^3.2",
+        "flexyproject/githubapi": "^1.1",
+        "milo/github-api": "^1.4"
+    }
+}
