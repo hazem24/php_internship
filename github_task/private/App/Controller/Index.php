@@ -38,16 +38,24 @@ Class Index extends Shared\Controller
         public function githubCallBackAction()
         {
             $this->rIn("id","index/overviewPage");
+
+            RequestHandler::getRequest();
+
             /** If no tokens saved .. save it. */
             if( false == $this->github->tokenExists() )
             {
-                RequestHandler::getRequest();
                 if(RequestHandler::get('redirect'))
                 {
                   /** Save New tokens. */
                   $tokens = $this->github->saveTokens(RequestHandler::get('code'), RequestHandler::get('state'));
                 }
             }
+
+            if(false == RequestHandler::get('refresh'))
+            {
+                $this->rOut("id","index/githubCallBack?refresh=1");
+            }
+
             /** Request User information. */
             $user_data = $this->github->requestUserData();
 
