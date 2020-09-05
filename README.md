@@ -10,7 +10,7 @@ web gen task 5
   * ![Files](https://i.ibb.co/6Hbc8mn/file-structure.png)
     * **php_internship->github_task**
  
- * **go to php_internship->github_task->private->App->settings.php open it on your editor.**
+ * **go to php_internship->github_task->private->App->setting.php open it on your editor.**
    
    * **Enable/Disable errors.**
     * ![error](https://i.ibb.co/xX2Lkfg/error-handler.png)
