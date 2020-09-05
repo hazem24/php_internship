@@ -4,4 +4,7 @@ web gen task 5
 ## requirements:
   * php 7
   * Mysql 5.7
-## Video (How to install the project). 
+## setup steps.
+ * Make sure that the files structure as the following.
+  ![Files Structures](https://ibb.co/QPn7kfb)
+
